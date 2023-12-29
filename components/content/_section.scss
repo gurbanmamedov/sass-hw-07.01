@@ -1,0 +1,85 @@
+@import "../variables/variables";
+
+@mixin flexSb($flex, $spaceBw) {
+  display: $flex;
+  justify-content: $spaceBw;
+}
+
+@mixin flexCenter($flex, $center) {
+  display: $flex;
+  justify-content: $center;
+}
+
+@mixin paddingSets($padding) {
+  padding: $padding;
+}
+
+.reviews {
+  @include flexCenter(flex, center);
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+
+  &__title {
+    color: var(--primary-text);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 42px;
+    margin-bottom: 42px;
+  }
+
+  &__cards {
+    @include flexSb(flex, space-between);
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+
+.card {
+  @include paddingSets(42px);
+  width: 32.2%;
+  background-color: var(--primary-background);
+
+  &__title {
+    width: 310px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    color: var(--primary-text);
+    margin-bottom: 50px;
+  }
+}
+
+.user {
+  display: flex;
+  gap: 16px;
+
+  &__image {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__name--dark {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    color: var(--primary-text);
+  }
+
+  &__stars {
+    margin-bottom: 11px;
+  }
+
+  &__company--light {
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    color: var(--primary-text);
+  }
+}

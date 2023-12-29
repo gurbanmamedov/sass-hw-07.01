@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&display=swap");
+@import "../components/base/normalizer";
+@import "../components/content/section";
+@import "../components/variables/variables";
+
+* {
+  font-family: "Epilogue", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
